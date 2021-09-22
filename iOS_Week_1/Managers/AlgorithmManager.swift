@@ -7,6 +7,14 @@
 
 import Foundation
 
+extension String {
+
+    var stripped: String {
+        let okayChars = Set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLKMNOPQRSTUVWXYZ")
+        return self.filter {okayChars.contains($0) }
+    }
+}
+
 class AlgorithmManager: AlgorithmProtocol {
     
     // MARK: - Two Sum
@@ -25,16 +33,15 @@ class AlgorithmManager: AlgorithmProtocol {
         let result = twoSum(nums, target)
         print("result : \(result)")
     }
-    private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {  //Check againn!!1!!!!
-        for (index, number) in nums.enumerated(){
-            for (ind,num) in nums.enumerated(){
-                if((number != num) && (number + num == 9)){
-                    print("[\(index),\(ind)]")
+    private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        for number in 0..<nums.count{
+            for num in number+1..<nums.count{
+                if((nums[number] != nums[num]) && (nums[number] + nums[num] == target)){
+                    return [number,num]
                 }
             }
         }
-        return [0,1]
-
+        return [-1]
     }
     
     // MARK: - IsPalindrome
@@ -45,17 +52,20 @@ class AlgorithmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        let s = "A man, a plan, a canal: Panama"
-        let target = true
+        let s = "A man, a plan, a canal: sPanama"
         let result = isPalindrome(s)
-        if (result == target){
-            print("true")
+        if(result == true){
+            print("It's a palindrome")
+        }
+        else{
+            print("Not A palindrome")
         }
     }
     
     func isPalindrome(_ s: String) -> Bool {
-        let reverse = String(s.reversed()) //Check again !!!!
-        if(reverse == s){
+        let s = String(s.stripped.lowercased())
+        let reverse = String(s.stripped.reversed())
+        if(s == reverse){
             return true
         }
         else{
