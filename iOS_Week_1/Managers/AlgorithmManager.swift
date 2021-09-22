@@ -34,6 +34,7 @@ class AlgorithmManager: AlgorithmProtocol {
         print("result : \(result)")
     }
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+        //for-in-for loop used in order to compare each of the elements
         for number in 0..<nums.count{
             for num in number+1..<nums.count{
                 if((nums[number] != nums[num]) && (nums[number] + nums[num] == target)){
@@ -63,6 +64,7 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     func isPalindrome(_ s: String) -> Bool {
+        //Created an extensions in order to remove special characters and compare it with reverse of that string to check its palindrome or not
         let s = String(s.stripped.lowercased())
         let reverse = String(s.stripped.reversed())
         if(s == reverse){
@@ -87,7 +89,7 @@ class AlgorithmManager: AlgorithmProtocol {
         print("\(result)")
     }
     
-    func isAnagram(_ s: String, _ t: String) -> Bool {
+    func isAnagram(_ s: String, _ t: String) -> Bool { //when we make these string as an array and sort them we can easily understand whether it's anagram or not
         let a = Array(s)
         let b = Array(t)
 
@@ -117,7 +119,7 @@ class AlgorithmManager: AlgorithmProtocol {
         }
     }
     
-    func containsDuplicate(_ nums: [Int]) -> Bool {
+    func containsDuplicate(_ nums: [Int]) -> Bool { //Filter checks each elements in order to see that it occurs only once, if it occurs more than one time than it returns true
         for number in nums{
             if(nums.filter{$0 == number}.count > 1){
                 return true
@@ -155,6 +157,7 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
+        // In this algorithm I dropped the last n elements from the first array which is only place reserved for array 2 then add array2 to array1 and sort it
         nums1 = nums1.dropLast(n)
         nums1 = nums1+nums2
         nums1.sort()
@@ -175,6 +178,7 @@ class AlgorithmManager: AlgorithmProtocol {
     }
     
     func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        // Array 1 loops for each of it's elements while array 2 checks wheter it's elements intersects the array1's elements or not. If it intersects the it adds it to the intersection array
         var intersection = [Int] ()
         for number in nums1{
             if(nums2.contains(number)){
@@ -206,7 +210,7 @@ class AlgorithmManager: AlgorithmProtocol {
         
     }
     private func missingNumber(_ nums: [Int]) -> Int {
-    
+        //It find the biggest element in nums array than start to count from 0 to that element if it sees a missing element then it returns the missing element
         var max = 0
         var missing = 0
         for number in nums{
