@@ -29,6 +29,10 @@ class ViewController: UIViewController {
         let structObj = SampleStruct(title: "title", subTitle: "subTitle")
         let classObj = SampleClass(name: "name", surName: "surname").setTitleObject(by: structObj)
         classObj.display()
+        
+        let realStruct = myStruct(header: "Başlık1", header2: "Başlık2")
+        let realClass = myClass(name: "Ege", surname: "Seçkin", age: 23)
+        realClass.display()
     }
 
     

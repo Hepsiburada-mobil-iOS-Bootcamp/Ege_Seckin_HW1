@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		565F1AA926FBD645004312D7 /* myClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F1AA826FBD645004312D7 /* myClass.swift */; };
+		565F1AAB26FBD653004312D7 /* myStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F1AAA26FBD653004312D7 /* myStruct.swift */; };
+		565F1AAD26FBD663004312D7 /* myEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565F1AAC26FBD663004312D7 /* myEnum.swift */; };
 		A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */; };
 		A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */; };
 		A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A4426F7BEBF0049FA45 /* ViewController.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		565F1AA826FBD645004312D7 /* myClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myClass.swift; sourceTree = "<group>"; };
+		565F1AAA26FBD653004312D7 /* myStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myStruct.swift; sourceTree = "<group>"; };
+		565F1AAC26FBD663004312D7 /* myEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myEnum.swift; sourceTree = "<group>"; };
 		A7CF0A3D26F7BEBF0049FA45 /* iOS_Week_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Week_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CF0A4026F7BEBF0049FA45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7CF0A4226F7BEBF0049FA45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
+				565F1AA826FBD645004312D7 /* myClass.swift */,
+				565F1AAA26FBD653004312D7 /* myStruct.swift */,
+				565F1AAC26FBD663004312D7 /* myEnum.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -295,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565F1AAB26FBD653004312D7 /* myStruct.swift in Sources */,
+				565F1AAD26FBD663004312D7 /* myEnum.swift in Sources */,
 				A7CF0A7526F7C0680049FA45 /* AlgorithmViewController.swift in Sources */,
 				A7CF0A7826F7C5EB0049FA45 /* AlgorithmManager.swift in Sources */,
 				A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */,
@@ -305,6 +316,7 @@
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
 				A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */,
 				A7CF0A7A26F7C5F50049FA45 /* AlgorithmProtocol.swift in Sources */,
+				565F1AA926FBD645004312D7 /* myClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
