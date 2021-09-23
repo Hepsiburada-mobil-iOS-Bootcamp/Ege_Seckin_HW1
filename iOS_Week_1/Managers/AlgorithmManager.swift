@@ -204,7 +204,7 @@ class AlgorithmManager: AlgorithmProtocol {
         
     }
     private func missingNumber(_ nums: [Int]) -> Int {
-        //It find the biggest element in nums array than start to count from 0 to that element if it sees a missing element then it returns the missing element
+        //It finds the biggest element in nums array than start to count from 0 to that element if it sees a missing element then it returns the missing element
         var max = 0
         var missing = 0
         for number in nums{
