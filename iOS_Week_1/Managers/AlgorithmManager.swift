@@ -67,12 +67,8 @@ class AlgorithmManager: AlgorithmProtocol {
         //Created an extensions in order to remove special characters and compare it with reverse of that string to check its palindrome or not
         let s = String(s.stripped.lowercased())
         let reverse = String(s.stripped.reversed())
-        if(s == reverse){
-            return true
-        }
-        else{
-            return false
-        }
+        
+        return s == reverse
         
     }
     
@@ -93,10 +89,8 @@ class AlgorithmManager: AlgorithmProtocol {
         let a = Array(s)
         let b = Array(t)
 
-        if a.sorted() == b.sorted() {
-            return true
-        }
-        return false
+        return a.sorted() == b.sorted()
+
     }
     
     // MARK: - Contains Duplicate
